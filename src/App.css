@@ -1,4 +1,12 @@
 .App {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
 
+.WordsContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  padding: 1em;
+  background-color: #e9d3ff;
+}

@@ -1,14 +1,6 @@
 [
     {
-        "id": "23266",
-        "deutsch": "Deutsch",
-        "artikel": "Artikel",
-        "bedeutung": "Bedeutung",
-        "russisch": "Russisch",
-        "beispiele": "Beispiele"
-      },
-    {
-      "id": "13265",
+      "id": 1,
       "deutsch": "Zinn",
       "artikel": "das",
       "bedeutung": "sehr weiches, dehnbares, silberweiß glänzendes Schwermetall (chemisches Element)",
@@ -16,7 +8,7 @@
       "beispiele": "altes Zinn sammeln"
     },
     {
-        "id": "13366",
+        "id": 2,
         "deutsch": "Nach­wuchs",
         "artikel": "der",
         "bedeutung": "Kind[er] (in einer Familie)",
@@ -24,7 +16,7 @@
         "beispiele": "in dieser Branche fehlt es an Nachwuchs"
     },
     {
-        "id": "13467",
+        "id": 3,
         "deutsch": "Wahrzeichen",
         "artikel": "das",
         "bedeutung": "etwas, was als Erkennungszeichen, als Sinnbild für etwas steht, besonders Kennzeichen einer Stadt, einer Landschaft",
@@ -32,7 +24,7 @@
         "beispiele": "der Kreml ist das Wahrzeichen Moskaus"
     },
     {
-        "id": "13568",
+        "id": 4,
         "deutsch": "Anlauf",
         "artikel": "der",
         "bedeutung": "das Anstürmen gegen etwas",
@@ -40,7 +32,7 @@
         "beispiele": "eine Festung im ersten Anlauf nehmen"
     },
     {
-        "id": "13669",
+        "id": 5,
         "deutsch": "traumhaft",
         "artikel": "-",
         "bedeutung": "ähnlich wie in einem Traum",
@@ -48,7 +40,7 @@
         "beispiele": "mit traumhafter Sicherheit"
     },
     {
-        "id": "14578",
+        "id": 6,
         "deutsch": "allerdings",
         "artikel": "-",
         "bedeutung": "freilich, jedoch (drückt eine Einschränkung aus)",
@@ -56,7 +48,7 @@
         "beispiele": "ich muss allerdings zugeben, dass dies gewollt ist"
     },
     {
-        "id": "15588",
+        "id": 7,
         "deutsch": "Vorrat",
         "artikel": "der",
         "bedeutung": "etwas, was in mehr oder weniger großen Mengen zum Verbrauch, Gebrauch vorhanden, angehäuft ist, zur Verfügung steht",
@@ -64,7 +56,7 @@
         "beispiele": "ein großer Vorrat an Lebensmitteln, Trinkwasser, Heizöl, Munition"
     },
     {
-        "id": "16598",
+        "id": 8,
         "deutsch": "Klee",
         "artikel": "der",
         "bedeutung": "krautige Pflanze mit meist drei-, selten vierteiligen Blättern und kugeligen weißen, gelblichen oder rötlich violetten Blüten",
@@ -72,7 +64,7 @@
         "beispiele": "nach der häufigen Verwendung des Klees"
     },
     {
-        "id": "17508",
+        "id": 9,
         "deutsch": "Fel­sen",
         "artikel": "der",
         "bedeutung": "größere, aufragende Masse fest in sich zusammenhängenden Gesteins",
@@ -80,7 +72,7 @@
         "beispiele": "auf einen Felsen klettern"
     },
     {
-        "id": "18518",
+        "id": 10,
         "deutsch": "Her­kunft",
         "artikel": "die",
         "bedeutung": "soziale Abstammung; bestimmter sozialer, nationaler, kultureller Bereich, aus dem jemand herkommt",

@@ -1,12 +1,14 @@
 .Footer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: flex-end;
-    cursor: pointer;
-    background-color: #865BD9;
-    color: aliceblue;
-    padding: 2em;
-    font-size: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-end;
+  cursor: pointer;
+  background-color: #865bd9;
+  color: aliceblue;
+  padding: 2em;
+  font-size: 1em;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
 }

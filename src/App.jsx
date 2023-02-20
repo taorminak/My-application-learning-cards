@@ -20,6 +20,18 @@ function App() {
     <div className={style.App}>
       <Header />
       <DataGrid columns={columns} rows={words} />
+      <div className={style.Card}>
+        {words.map((word) => (
+          <Card
+            id={word.id}
+            deutsch={word.deutsch}
+            artikel={word.artikel}
+            bedeutung={word.bedeutung}
+            russisch={word.russisch}
+            beispiele={word.beispiele}
+          />
+        ))}
+      </div>
       <Footer />
     </div>
   );

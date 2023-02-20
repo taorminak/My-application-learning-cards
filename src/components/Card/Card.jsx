@@ -39,11 +39,11 @@ export default function Card(props) {
       </div>
       :
       <div className={styles.Inputs}>
-      <input type="text" className={styles.Deutsch + "" + styles.Input} defaultValue={props.deutsch}/>
-      <input type="text" className={styles.Artikel + "" + styles.Input} defaultValue={props.artikel}/>
-      <input type="text" className={styles.Bedeutung + "" + styles.Input} defaultValue={props.bedeutung}/>
-      <input type="text" className={styles.Beispiele + "" + styles.Input} defaultValue={props.beispiele}/>
-      <input type="text" className={styles.Russisch + "" + styles.Input} defaultValue={props.russisch}/>
+      <input type="text" className={styles.Deutsch + " " + styles.Input} defaultValue={props.deutsch}/>
+      <input type="text" className={styles.Artikel + " " + styles.Input} defaultValue={props.artikel}/>
+      <input type="text" className={styles.Bedeutung + " " + styles.Input} defaultValue={props.bedeutung}/>
+      <input type="text" className={styles.Beispiele + " " + styles.Input} defaultValue={props.beispiele}/>
+      <input type="text" className={styles.Russisch + " " + styles.Input} defaultValue={props.russisch}/>
       <button className={styles.Button} onClick={getSaved}>Save</button>
       </div>
     }

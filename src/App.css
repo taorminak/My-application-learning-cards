@@ -15,3 +15,35 @@
   margin-bottom: 25vh;
   margin-top: 25vh;
 }
+
+.Button {
+  background-color: #865bd9;
+  color: white;
+  font-size: 1em;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 1s ease;
+  margin: 1em;
+  font-family: "Inter", sans-serif;
+  width: 8em;
+}
+
+.Button:hover {
+  background-color: #9400d3;
+  cursor: pointer;
+}
+
+.ButtonContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.FlippingCard {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  margin-top: 15vh;
+}

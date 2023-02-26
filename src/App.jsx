@@ -20,7 +20,7 @@ function App() {
   function handleNext() {
     setCount(count + 1);
     console.log(count);
-    if (count >= 9) {
+    if (count >= (words.length-1)) {
       alert("There is the last card available!");
       setCount(count);
     }
@@ -32,7 +32,6 @@ function App() {
       <div className={styles.FlippingCard}>
         <FlippingCard
           words={words[count]} count={count}
-          id={words[count].id}
           deutsch={words[count].deutsch}
           artikel={words[count].artikel}
           russisch={words[count].russisch}

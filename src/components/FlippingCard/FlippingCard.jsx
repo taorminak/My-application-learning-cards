@@ -1,5 +1,4 @@
 import styles from "./FlippingCard.css";
-import { useState } from "react";
 
 export default function FlippingCard(props) {
   return (

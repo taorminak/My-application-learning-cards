@@ -1,33 +1,52 @@
-import style from "./App.css";
+import styles from "./App.css";
 import words from "./components/all-words.json";
 import Card from "./components/Card/Card";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import { useState } from "react";
-
+import FlippingCard from "./components/FlippingCard/FlippingCard";
 
 function App() {
-const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
 
-function handlePrev() {
-  setCount(count - 1)
-}
+  function handlePrev() {
+    setCount(count - 1);
+    if (count <= 0) {
+      alert("There is the first card available!");
+      setCount(count);
+    }
+  }
 
-function handleNext() {
-  setCount(count + 1)
-}
+  function handleNext() {
+    setCount(count + 1);
+    console.log(count);
+    if (count >= 9) {
+      alert("There is the last card available!");
+      setCount(count);
+    }
+  }
 
-console.log(words[count].deutsch)
   return (
-    <div className={style.App}>
+    <div className={styles.App}>
       <Header />
-      <div className={style.FlippingCard}>
-        <Card words={words[count].deutsch}/>
-        <div className={style.ButtonContainer}>
-        <button className={style.Button}  onClick={handlePrev}>Previous</button>
-        <button className={style.Button}  onClick={handleNext}>Next</button></div>
+      <div className={styles.FlippingCard}>
+        <FlippingCard
+          words={words[count]} count={count}
+          id={words[count].id}
+          deutsch={words[count].deutsch}
+          artikel={words[count].artikel}
+          russisch={words[count].russisch}
+        />
+        <div className={styles.ButtonContainer}>
+          <button className={styles.Button} onClick={handlePrev}>
+          ←
+          </button>
+          <button className={styles.Button} onClick={handleNext}>
+          →
+          </button>
+        </div>
       </div>
-      <div className={style.Card}>
+      <div className={styles.Card}>
         {words.map((word) => (
           <Card
             id={word.id}

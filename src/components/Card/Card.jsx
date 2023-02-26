@@ -33,7 +33,7 @@ export default function Card(props) {
             ) : (
               <div className={styles.Translation}>{props.russisch}</div>
             )}
-            <button className={styles.Button} onClick={getEdited}>
+            <button className={styles.Button+" "+styles.GetEdited} onClick={getEdited}>
               Edit card
             </button>
           </div>

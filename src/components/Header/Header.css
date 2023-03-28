@@ -1,7 +1,7 @@
 .Header {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 20px;
   justify-content: flex-end;
   cursor: pointer;
@@ -11,4 +11,19 @@
   font-size: 1em;
   font-family: "Inter", sans-serif;
   font-weight: 600;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+ul li > * { text-decoration: none;
+  color: white;
+
+}
+
+ul li > *:hover {
+  color:blue
+}
+
+ul li:hover {
+  color:blue
 }

@@ -1,13 +1,13 @@
-import styles from "./App.css";
-import words from "./components/all-words.json";
-import Card from "./components/Card/Card";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+import React from "react";
+import FlippingCard from "../../components/FlippingCard/FlippingCard";
 import { useState } from "react";
-import FlippingCard from "./components/FlippingCard/FlippingCard";
+import words from "../../components/all-words.json";
+import styles from "./Home.css"
 
-function App() {
-  const [count, setCount] = useState(0);
+
+export default function Home() {
+
+    const [count, setCount] = useState(0);
 
   function handlePrev() {
     setCount(count - 1);
@@ -26,10 +26,8 @@ function App() {
     }
   }
 
-  return (
-    <div className={styles.App}>
-      <Header />
-      <div className={styles.FlippingCard}>
+    return (
+        <div className={styles.FlippingCard}>
         <FlippingCard
           words={words[count]} count={count}
           deutsch={words[count].deutsch}
@@ -45,21 +43,5 @@ function App() {
           </button>
         </div>
       </div>
-      <div className={styles.Card}>
-        {words.map((word) => (
-          <Card
-            id={word.id}
-            deutsch={word.deutsch}
-            artikel={word.artikel}
-            bedeutung={word.bedeutung}
-            russisch={word.russisch}
-            beispiele={word.beispiele}
-          />
-        ))}
-      </div>
-      <Footer />
-    </div>
-  );
-}
-
-export default App;
+    );
+  }

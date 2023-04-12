@@ -1,12 +1,20 @@
 import styles from "./Card.css";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Card(props) {
   const [isEdited, setIsEdited] = useState(true);
   const [flag, setFlag] = useState(true);
+  const translationRef = useRef(null);
+
+  useEffect(() => {
+    translationRef.current.focus();
+  }, []);
+
 
   function getTranslated() {
     setFlag(false);
+    props.studiedCount.current += 1;
+
   }
 
   function getEdited() {
@@ -27,7 +35,7 @@ export default function Card(props) {
           <div>
             {" "}
             {flag ? (
-              <button onClick={getTranslated} className={styles.Button}>
+              <button  ref={translationRef} onClick={getTranslated} className={styles.Button}>
                 Translate
               </button>
             ) : (

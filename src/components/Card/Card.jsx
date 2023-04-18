@@ -1,7 +1,10 @@
 import styles from "./Card.css";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
+import { WordContext } from "../../Context/MyContext";
 
 export default function Card(props) {
+const {words, setWords}=useContext(WordContext)
+console.log(words)
   const [isEdited, setIsEdited] = useState(true);
   const [flag, setFlag] = useState(true);
   const translationRef = useRef(null);
@@ -24,14 +27,31 @@ export default function Card(props) {
     setIsEdited(true);
   }
 
+  const deleteWord = () => {
+    const filteredWords = words.filter((word) => word.id !== props.id);
+    setWords(filteredWords);
+  }
+
+  const updateWord = (id, updatedWord) => {
+    const updatedWords = words.map((word) => {
+      if (word.id === id) {
+        return { ...word, ...updatedWord };
+      }
+      return word;
+    });
+    setWords(updatedWords);
+  }
+
+
+
   return (
     <div className={styles.Card}>
       {isEdited ? (
         <div>
-          <div className={styles.Deutsch}>{props.deutsch}</div>
-          <div className={styles.Artikel}>{props.artikel}</div>
-          <div className={styles.Bedeutung}>{props.bedeutung}</div>
-          <div className={styles.Beispiele}>{props.beispiele}</div>
+          <div className={styles.Deutsch}>{props.english}</div>
+          <div className={styles.Artikel}>{props.transcription}</div>
+          <div className={styles.Bedeutung}>{props.russian}</div>
+          <div className={styles.Beispiele}>{props.id}</div>
           <div>
             {" "}
             {flag ? (
@@ -39,10 +59,13 @@ export default function Card(props) {
                 Translate
               </button>
             ) : (
-              <div className={styles.Translation}>{props.russisch}</div>
+              <div className={styles.Translation}>{props.russian}</div>
             )}
-            <button className={styles.Button+" "+styles.GetEdited} onClick={getEdited}>
+            <button className={styles.Button+" "+styles.GetEdited} onClick={updateWord}>
               Edit card
+            </button>
+            <button className={styles.Button+" "+styles.GetEdited} onClick={deleteWord}>
+              Delete card
             </button>
           </div>
         </div>
@@ -51,22 +74,22 @@ export default function Card(props) {
           <input
             type="text"
             className={styles.Deutsch + " " + styles.Input}
-            defaultValue={props.deutsch}
+            defaultValue={props.english}
           />
           <input
             type="text"
             className={styles.Artikel + " " + styles.Input}
-            defaultValue={props.artikel}
+            defaultValue={props.transcription}
           />
           <input
             type="text"
             className={styles.Bedeutung + " " + styles.Input}
-            defaultValue={props.bedeutung}
+            defaultValue={props.russian}
           />
           <input
             type="text"
             className={styles.Beispiele + " " + styles.Input}
-            defaultValue={props.beispiele}
+            defaultValue={props.id}
           />
           <input
             type="text"

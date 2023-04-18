@@ -1,11 +1,20 @@
-import React from "react";
-import words from "../../components/all-words.json";
+import React, { useRef, useContext, useEffect }  from "react";
 import Card from "../../components/Card/Card";
 import styles from "./StudySets.css";
-import { useRef } from "react";
+import { WordContext } from "../../Context/MyContext";
 
 export default function StudySets() {
   const studiedCount = useRef(0);
+
+  const { words, setWords } = useContext(WordContext);
+console.log(words)
+
+const addWord = (newWord) => {
+  setWords([...words, newWord]);
+}
+
+
+
 
   return (
     <div>
@@ -16,14 +25,16 @@ export default function StudySets() {
         {words.map((word) => (
           <Card
             key={word.id}
-            deutsch={word.deutsch}
-            artikel={word.artikel}
-            bedeutung={word.bedeutung}
-            russisch={word.russisch}
-            beispiele={word.beispiele}
+            english={word.english}
+            transcription={word.transcription}
+            russian={word.russian}
             studiedCount={studiedCount}
+            deleteWord={word.deleteWord}
+            updateWord={word.updateWord}
           />
         ))}
+        <button className={styles.Button} onClick={() => addWord()}>Add new word</button>
+
       </div>
     </div>
   );
